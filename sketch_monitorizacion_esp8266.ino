@@ -373,7 +373,7 @@ Serial.println("Guardados todos los datos en la memoria");
   if (!toggleFlag) {
     Serial.print("Primera ejecución \n");
     int rtcPos = 66;
-    rtcMem.battery = analogRead(A0)/1023*3*25*230;
+    rtcMem.battery = analogRead(A0)/1023*3*30*230;
     system_rtc_mem_write(rtcPos, &rtcMem, 4);
     toggleFlag = true;
     system_rtc_mem_write(64, &toggleFlag, 4);
@@ -398,7 +398,7 @@ Serial.println("Guardados todos los datos en la memoria");
     Serial.print("Posición corregida");
     }
     //Leemos y almacenamos
-    rtcMem.battery = analogRead(A0)/1023*3*25*230;
+    rtcMem.battery = analogRead(A0)/1023*3*30*230;
     system_rtc_mem_write(rtcPos, &rtcMem, 4);
     Serial.print("Battery level: ");
     Serial.println(rtcMem.battery);
